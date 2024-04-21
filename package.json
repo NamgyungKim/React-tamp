@@ -1,5 +1,5 @@
 {
-  "name": "Metarock_menage",
+  "name": "Template_1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +7,7 @@
     "@emotion/babel-preset-css-prop": "^11.2.0",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.15.15",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -15,6 +16,7 @@
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
     "@types/react-router-dom": "^5.3.3",
+    "framer-motion": "^11.1.7",
     "react": "^18.2.0",
     "react-dom": "^18.1.0",
     "react-router": "^6.3.0",
@@ -28,15 +30,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
-    "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\""
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx,json}": "eslint --cache --fix",
@@ -71,16 +65,6 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.3.8",
-    "@storybook/addon-essentials": "^6.3.8",
-    "@storybook/addon-interactions": "^6.3.8",
-    "@storybook/addon-links": "^6.3.8",
-    "@storybook/builder-webpack5": "^6.3.8",
-    "@storybook/manager-webpack5": "^6.3.8",
-    "@storybook/node-logger": "^6.3.8",
-    "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.3.8",
-    "@storybook/testing-library": "^0.0.11",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
     "babel-plugin-named-exports-order": "^0.0.2",
@@ -88,9 +72,11 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
-    "husky": "^8.0.1",
     "prettier": "^2.6.2",
     "prop-types": "^15.8.1",
     "webpack": "^5.73.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
